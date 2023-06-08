@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -execdir chmod +x +
+ls -d */ | xargs -I{} chmod +x {}
