@@ -1,22 +1,8 @@
 ## Shell permissions
 
-### All files in this directory are executable files. 
-*what is an executable file?*
-+ they are files that contain instructions to perform specific tasks
-+ e.g. the /bin directory contains all sysetem-wide executable files like ls, mkdir, touch, pwd
-+ inside these files are defined rules and instructions that tells the computer what to do if any of these files are executed.
-+ the computer understands to list all files and directories when the `ls` file is executed.
-
-*why are paths not specified for system defined executable files like* `ls` *and* `touch` *etc?*
-+ there is a Linux variable called `PATH` which contains commonly used path names.
-+ when an executable file is passed as a command without its path been specified, LINUX searches through the `PATH` variable 
-+ to find where the file is located. once file is found, LINUX executes it with the instructions specified in it.
-
-
 ### The files in this dirctory and what they do
 *File 0*
 + a script that switches the current user to a user called `betty`
-
 
 *File 1*
 + script that prints the username of the current user
