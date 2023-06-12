@@ -1,6 +1,4 @@
-## Shell permissions
-
-### The files in this dirctory and what they do
+# Files in this dirctory and what they do
 *File 0*
 + a script that switches the current user to a user called `betty`
 
