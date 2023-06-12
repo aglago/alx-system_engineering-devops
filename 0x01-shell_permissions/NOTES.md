@@ -1,4 +1,4 @@
-# Notes on shell permissions
+# Shell Permissions
 
 ## who is a user on Linux
 + a user refers to an individual who interacts with the system by logging in and performing various tasks. 
