@@ -1,4 +1,4 @@
-# Notes on shell basics
+# Notes on shell permissions
 
 ## who is a user on Linux
 + a user refers to an individual who interacts with the system by logging in and performing various tasks. 
@@ -26,7 +26,7 @@
  + 777 - rwx
 
 
-## Add execution rights to all.
+### Add execution rights to all.
 + chmod +x
 
 ### Add execution rights to users
