@@ -1,4 +1,4 @@
-# Files in this dirctory and what they do
+# Defines the function of each file in this directory
 *File 0*
 + a script that switches the current user to a user called `betty`
 
