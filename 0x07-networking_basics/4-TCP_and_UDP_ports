@@ -2,4 +2,4 @@
 
 # displaying all listening ports
 
-netstat -l
+netstat -lp
