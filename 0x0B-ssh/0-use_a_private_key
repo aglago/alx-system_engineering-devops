@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# connecting to a remote server on local machine
 ssh -i ~/.ssh/school ubuntu@server
