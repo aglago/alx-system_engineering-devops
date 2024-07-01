@@ -1,5 +1,5 @@
 Host server 
  HostName 54.235.194.241
  User ubuntu
- IdsntityFile ~/.ssh/school
+ IdentityFile ~/.ssh/school
  PasswordAuthentication no
