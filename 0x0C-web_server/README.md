@@ -73,7 +73,7 @@ This directive specifies the file where Nginx will store its process ID (PID). T
 ### `include /etc/nginx/modules-enabled/*.conf;`
 This directive tells Nginx to include and process all configuration files ending in `.conf` from the `/etc/nginx/modules-enabled/` directory. This is useful for modular configuration, allowing you to enable or disable modules by simply adding or removing configuration files in this directory.
 
-### `events {...}'
+### `events {...}`
 The events block should have directives that manage how Nginx handles network connections. Network connection-related directives involve:
 + Handling incoming requests (e.g., `worker_connections` to set the number of connections each worker can handle). 
 + Optimizing performance (e.g., `multi_accept` to accept multiple connections simultaneously).
