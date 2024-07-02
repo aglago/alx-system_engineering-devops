@@ -7,11 +7,11 @@ sudo apt-get update -y
 # Install Nginx
 sudo apt-get install nginx -y
 
+# Ensure Nginx is listening on port 80
+sudo ufw allow 'Nginx HTTP'
+
 # Create a custom index.html with "Hello World!" content
 echo "Hello World!" > /var/www/html/index.html
 
 # Restart Nginx to apply changes
 sudo service nginx restart
-
-# Ensure Nginx is listening on port 80
-sudo ufw allow 'Nginx HTTP'
