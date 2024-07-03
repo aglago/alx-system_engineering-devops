@@ -1,9 +1,12 @@
-Web Server
+# Web Server
 
-## Nginx
-Nginx is a software web server that serves static web contents.
+## Table of Content
+- [What is Nginx](#what-is-nginx)
 
-Nginx is capable of hosting multiple websites (also known as virtual hosts or server blocks) on the same server. Each website can have its own domain name (e.g., `example.com`, `fish.com`, `animal.io`) and configuration settings within separate `server` blocks. This allows Nginx to efficiently serve different websites or web applications from a single server instance.
+## What is Nginx
+Nginx is a software web server that serves static web content.
+
+Nginx is capable of hosting multiple websites (also known as virtual hosts or server blocks) on the same server. Each website can have its domain name (e.g., `example.com`, `fish.com`, `animal.io`) and configuration settings within separate `server` blocks. This allows Nginx to efficiently serve different websites or web applications from a single server instance.
 
 ## Installation and configuration files
 
