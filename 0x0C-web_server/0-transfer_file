@@ -14,4 +14,4 @@ user=$3
 key=$4
 
 # add file to server
-scp -o StrickHostKeyChecking=no -i "$key" "$file" "$user"@"$ip":~/
+scp -o StrictHostKeyChecking=no -i "$key" "$file" "$user"@"$ip":~/
