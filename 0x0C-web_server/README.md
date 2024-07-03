@@ -47,7 +47,7 @@ user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
 include /etc/nginx/modules-enabled/*.conf;
-                                                        events {
+events {
         worker_connections 768;
         # multi_accept on;
 }
