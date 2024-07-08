@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Configure Nginx server to have a custom 404 page
+
+# Update package lists
+sudo apt-get update -y
+
+# Install Nginx
+sudo apt-get install nginx -y
+
+# Create a custom index.html with "Hello World!" content
+echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+
+# Create custom 404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html > /dev/null
+
+# Add a permanent redirection to /redirect_me and location block for 404
+sudo sed -i "s/server_name _;/server_name _;\n\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/watch\?v=QH2-TGUlwu4;\n\t}\n\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot\/var\/www\/html;\n\t\tinternal;\n\t}/" /etc/nginx/sites-available/default
+
+# Restart Nginx to apply changes
+sudo service nginx restart
