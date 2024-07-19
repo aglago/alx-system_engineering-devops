@@ -8,7 +8,7 @@ sudo apt-get install haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
 
 # Configure HAProxy
-sudo cat <<EOF > /etc/haproxy/haproxy.cfg
+cat << EOF | sudo tee /etc/haproxy/haproxy.cfg > /dev/null
 global
     log /dev/log local0
     log /dev/log local1 notice
@@ -36,12 +36,12 @@ frontend http_front
 backend http_back
     balance roundrobin
     server 434763-web-01 52.3.250.188:80 check
-    server 434763-web-01 52.23.212.81:80 check
+    server 434763-web-02 52.23.212.81:80 check
 
 EOF
 
 # Enable HAProxy service to start on boot
-update-rc.d haproxy enable
+sudo update-rc.d haproxy enable
 
 # Restart HAProxy to apply the new configuration
 sudo service haproxy restart
