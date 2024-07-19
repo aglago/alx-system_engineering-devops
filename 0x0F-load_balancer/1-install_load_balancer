@@ -2,7 +2,7 @@
 # install load balancer and configure to send traffic to 2 servers
 
 sudo apt-get update -y
-sudo apt-get install haproxy
+sudo apt-get install haproxy -y
 
 # Backup the original HAProxy config file
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
