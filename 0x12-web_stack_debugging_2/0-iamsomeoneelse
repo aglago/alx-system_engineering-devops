@@ -2,4 +2,4 @@
 # I am root.
 # Run whoami command under another user
 
-sudo -u $1 whoami
+sudo -u "$1" whoami
