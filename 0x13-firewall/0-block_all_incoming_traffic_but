@@ -1,0 +1,3 @@
+sudo apt update
+sudo apt-get install ufw -y
+echo y | sudo ufw enable >> /dev/null
