@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# comfigure nginx to run as nginx user
+# configure nginx to run as nginx user
 
 # Add user and group nginx for nginx config
 sudo chown -R nginx:nginx /etc/nginx
