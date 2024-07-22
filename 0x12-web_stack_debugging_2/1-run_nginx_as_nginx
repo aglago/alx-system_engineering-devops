@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# comfigure nginx to run as nginx user
+
+# Add user and group nginx for nginx config
+sudo chown -R nginx:nginx /etc/nginx
+
+# Replace previous ports of 80 with 8080
+sudo sed -i "s|80 default_server;|8080 default_server;|" /etc/nginx/sites-available/default
+
+# Restart nginx
+sudo service nginx restart
