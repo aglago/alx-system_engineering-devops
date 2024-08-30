@@ -1,18 +1,12 @@
-# Puppet manifest to optimize Nginx configuration for handling load
+# Fix problem of high amount of requests
 
-class nginx_config {
-    file { '/etc/nginx/nginx.conf':
-        ensure  => file,
-        owner   => 'root',
-        group   => 'root',
-        mode    => '0644',
-        content => template('nginx/nginx.conf.erb'),
-        notify  => Service['nginx'],
-    }
+exec {'replace':
+  provider => shell,
+  command  => 'sudo sed -i "s/ULIMIT=\"-n 15\"/ULIMIT=\"-n 4096\"/" /etc/default/nginx',
+  before   => Exec['restart'],
 }
 
-service { 'nginx':
-    ensure  => running,
-    enable  => true,
-    require => Class['nginx_config'],
+exec {'restart':
+  provider => shell,
+  command  => 'sudo service nginx restart',
 }
